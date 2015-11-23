@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Watch</title> 
+	<!-- Treat application as a web app -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Viewport settings -->
+	<!-- <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" /> -->
+	<meta name="viewport" content="user-scalable=no,initial-scale=1.0" />
+
+	<!-- Remove auto detection of phone numbers -->
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/style.css" />
+
+
+	</head> 
+
+<body>
+	<div id="mainbody">
+		<div id="appArea">
+			<div id="dashHeader">
+			</div>
+			<div id="dashList">
+			</div>
+			<div id="dashView">
+			</div>
+			
+		</div>
+	</div>
+
+	<!-- ---------------------TEMPLATE INCLUDES --------------------------- -->
+	<script id="dashHeaderTemplate" type="text/x-handlebars-template">
+		<div class='bg-container-outer'>
+			<div class='bg-container-inner'>
+				<div class="site-titlehead">
+					<h1>WEATHER</h1>
+
+					<span class="location-name">{{city.name}}</span>
+				</div>
+								<div class='option'>
+
+				</div>
+			</div>
+		</div>
+
+	</script>
+	<script id="dashListTemplate" type="text/x-handlebars-template">
+		<div class='bg-container-outer'>
+			<div class='bg-container-inner'>
+				<div class="daily-window-container">
+					<div class="daily-window">
+						<ul class="daily">
+						{{#_dayList}}
+							<li class="daily__day-tab" id="day-{{id}}">
+							 <a>
+								<div class="daily_day-header">
+								
+									<h3 class="daily_day-date">										
+										<span class="day-name">{{date}}</span>
+									</h3>
+									{{#weather}}
+									<h4>{{main}}
+									</h4>
+									{{/weather}}
+									
+								</div>
+								<span class="max-temp max-temp-value">max 
+									<span class="temperature-value-unit-c">{{max_temp}}
+										<span class="unit">°C</span>
+									</span>
+								</span>
+
+								<span class="min-temp min-temp-value">min:  
+									<span class="temperature-value-unit-c">{{min_temp}}
+										<span class="unit">°C</span>
+									</span>
+								</span>
+								</a>
+							</li>
+							{{/_dayList}}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</script>
+	<script id="dashViewTemplate" type="text/x-handlebars-template">
+		<div class='bg-container-outer'>
+			<div class='bg-container-inner'>
+
+				<div class="hourly-window">
+					<ul class="hourly">
+						{{#_dayList}}
+						<li class="hourly__day-tab">
+							<a>
+								<div class="hourly_day-header">
+									<h3 class="hourly_day-date">
+										<span class="time">{{hour}}</span>
+									</h3>
+								</div>
+								{{#weather}}
+								<div class="weather-type-image">
+									<img alt={{description}} src="http://openweathermap.org/img/w/{{icon}}.png"/>
+								</div>
+								{{/weather}}
+
+								<span class="max-temp max-temp-value">
+									<span class="temperature-value-unit-c">{{main.temp}}
+										<span class="unit">°C</span>
+									</span>
+								</span>
+								<br>
+							</a>
+						</li>
+						{{/_dayList}}
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+	</script>
+
+	<!-- ---------------------JAVASCRIPT INCUDES--------------------------- -->
+
+	<!-- external libs -->
+	<script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="lib/underscore.js"></script>
+	<script type="text/javascript" src="lib/backbone-min.js"></script>
+	<script type="text/javascript" src="lib/handlebars-v4.0.2.js"></script>
+
+	<!-- project includes -->
+	<script type="text/javascript" src="app/router.js"></script>
+	<script type="text/javascript" src="app/models/initmodel.js"></script>
+	<script type="text/javascript" src="app/views/dashview.js"></script>
+
+	<script type="text/javascript" src="app/main.js"></script>
+
+
+</body>
+</html>

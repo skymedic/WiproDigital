@@ -1,0 +1,131 @@
+ul {list-style: none;}
+li {display: list-item;}
+a * {
+	cursor: pointer;
+}
+.bg-container-inner{
+
+}
+.site-titlehead{height: 88px; float: left;}
+.site-titlehead h1 {     
+	margin-top: 0;
+    padding-top: 16px;
+    margin-left: 8px;
+    overflow: hidden;
+
+}
+.location-name
+{
+    text-transform: uppercase;
+    vertical-align: bottom;
+    padding: 2px 0 5px 0;
+    font-size: 2.769em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 36px;
+    font-weight: normal;
+    display: inline;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.daily-window 
+{
+    position: relative;
+    overflow: hidden;
+}
+.hourly-window {
+	margin-left: 56px;
+}
+.daily {
+    height: 120px;
+    position: relative;
+}
+.daily li.first {
+    margin-left: 0;
+}
+.daily li, .hourly li {
+    display: block;
+    float: left;
+    width: 123px;
+    height: 120px;
+    margin-left: 2px;
+}
+
+.daily__day-tab {
+    position: relative;
+}
+.daily li.active a {
+    color: #000000;
+    background-color: #ffffff;
+}
+.daily li a {
+    display: block;
+    width: 107px;
+    height: 104px;
+    padding: 8px;
+    color: #ffffff;
+    background: #226083;
+}
+.daily li.active a .daily__day-date,.hourly li.active a .hourly__day-date  {
+    text-decoration: none;
+}
+.daily li a .daily__day-date, .hourly li a .hourly__day-date {
+    display: block;
+    margin-top: -4px;
+    margin-bottom: 8px;
+    padding: 0;
+    line-height: 1em;
+}
+
+.daily li a .daily__day-date .day-name {
+    font-size: 1.846em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 28px;
+    position: relative;
+    display: -moz-inline-block;
+    display: inline-block;
+    padding: 0;
+}
+.time{
+    font-size: 0.746em;
+    line-height: 16px;
+    position: relative;
+    display: -moz-inline-block;
+    display: inline-block;
+    padding: 0;
+}
+.hourly li a {
+	display: block;
+    width: 107px;
+    height: 104px;
+    padding: 8px;
+    color: #ffffff;
+    background: #8F9BEA;
+}
+.daily li a .max-temp {
+    font-size: 1.538em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 24px;
+    text-rendering: optimizelegibility;
+    font-weight: bold;
+    height: 20px;
+    line-height: 1em;
+    margin-top: -2px;
+}
+.daily li a .max-temp,  .daily li a .min-temp, .daily li a .min-temp-label {
+    float: left;
+    display: block;
+    width: 59px;
+    white-space: nowrap;
+}
+.daily_day-header h4{margin: 10px 0px;}
+.daily_day-header h3, .hourly_day-header h3{margin: 0;}
+.temperature-value-unit-c {
+	display: :inline;
+}
+.day-name{text-decoration: underline;}
